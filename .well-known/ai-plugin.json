@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Wealthy Tigers",
+  "name_for_model": "wealthy_tigers",
+  "description_for_human": "Leading multichannel store for international brands in Thailand",
+  "description_for_model": "Wealthy Tigers is a professional multichannel retail platform in Thailand specializing in importing and distributing international food, beverage, lifestyle, and fashion brands. The platform provides seamless omnichannel shopping experiences across online and offline channels, while also developing unique own-brand collections. Services include: brand import and distribution, multichannel retail solutions, brand partnership opportunities, and professional market entry support for international brands entering the Thai market.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://wealthytigers.com/openapi.json"
+  },
+  "logo_url": "https://wealthytigers.com/assets/images/logo-long.png",
+  "contact_email": "info@wealthytigers.com",
+  "legal_info_url": "https://wealthytigers.com/about.html"
+}
+

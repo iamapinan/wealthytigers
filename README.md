@@ -43,6 +43,9 @@ Wealthy Tiger ได้รับความไว้วางใจจากเ
 - **Contact Form** - ฟอร์มติดต่อพร้อม validation
 - **FAQ Section** - คำถามที่พบบ่อย
 - **SEO Optimized** - เพิ่มประสิทธิภาพสำหรับ SEO
+- **AI-Optimized SEO** - รองรับการค้นหาผ่าน AI และ LLM
+- **Structured Data** - Schema.org JSON-LD markup
+- **Social Media Ready** - Open Graph & Twitter Cards
 
 ## เทคโนโลยี
 
@@ -61,6 +64,12 @@ Wealthy Tiger ได้รับความไว้วางใจจากเ
 
 ### Deploy บน Firebase Hosting
 ดูรายละเอียดใน [DEPLOYMENT.md](DEPLOYMENT.md)
+
+### SEO Configuration
+ดูรายละเอียดการตั้งค่า SEO และการทดสอบใน:
+- [SEO_IMPLEMENTATION_SUMMARY.md](SEO_IMPLEMENTATION_SUMMARY.md) - สรุปการติดตั้ง
+- [SEO_GUIDE.md](SEO_GUIDE.md) - คู่มือรายละเอียด
+- [SEO_CHECKLIST.md](SEO_CHECKLIST.md) - เช็คลิสต์การทดสอบ
 
 ## การปรับแต่ง
 

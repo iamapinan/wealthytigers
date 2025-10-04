@@ -4,13 +4,16 @@
     "ignore": [
       "firebase.json",
       "**/.*",
+      "!.well-known/**",
       "**/node_modules/**",
       "README.md",
       "DESIGN_NOTES.md",
       "DEPLOYMENT.md",
       "ICON_GENERATION_GUIDE.md",
       "COMPONENTS_GUIDE.md",
-      "Contents.md"
+      "Contents.md",
+      "SEO_GUIDE.md",
+      "EXAMPLE_EDIT.md"
     ],
     "headers": [
       {
@@ -37,6 +40,45 @@
           {
             "key": "Cache-Control",
             "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source": "robots.txt",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/plain"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "max-age=86400"
+          }
+        ]
+      },
+      {
+        "source": "sitemap.xml",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "max-age=86400"
+          }
+        ]
+      },
+      {
+        "source": ".well-known/**",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "max-age=86400"
           }
         ]
       }
