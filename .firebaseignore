@@ -1,0 +1,9 @@
+# Firebase ignore
+.git
+.github
+node_modules
+.firebaserc
+firebase.json
+README.md
+.gitignore
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Test - Wealthy Tigers</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .lang-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .lang-toggle:hover {
+            background: #1a3a52;
+            color: white;
+        }
+        h1 {
+            color: #1a3a52;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background: #e3f2fd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Language Switcher Test</h1>
+    
+    <div class="test-section">
+        <h2>Language Toggle Button</h2>
+        <button class="lang-toggle">
+            <i class="fas fa-globe"></i>
+            <span class="lang-text">TH</span>
+        </button>
+        <div class="status" id="status">
+            Click the button above to test language switching
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test Content (Should Change Language)</h2>
+        <p><strong>Navigation:</strong></p>
+        <ul>
+            <li data-i18n="nav.home">หน้าแรก</li>
+            <li data-i18n="nav.about">เกี่ยวกับเรา</li>
+            <li data-i18n="nav.collections">คอลเลกชัน</li>
+            <li data-i18n="nav.partnership">ความร่วมมือ</li>
+            <li data-i18n="nav.contact">ติดต่อเรา</li>
+        </ul>
+
+        <p><strong>Home Page:</strong></p>
+        <p data-i18n="home.title">Wealthy Tigers</p>
+        <p data-i18n="home.subtitle">คัดสรรและนำเข้าแบรนด์อาหาร เครื่องดื่ม ไลฟ์สไตล์ และแฟชั่นจากทั่วโลก</p>
+        <button data-i18n="home.ctaExploreBrands">สำรวจแบรนด์</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Console Log</h2>
+        <div id="console-output" style="background: #f5f5f5; padding: 10px; font-family: monospace; font-size: 12px;">
+            Open browser console (F12) to see detailed logs
+        </div>
+    </div>
+
+    <script src="assets/js/language.js"></script>
+    <script>
+        // Additional test script
+        document.addEventListener('DOMContentLoaded', function() {
+            const statusDiv = document.getElementById('status');
+            
+            // Override console.log to show in page
+            const originalLog = console.log;
+            console.log = function(...args) {
+                originalLog.apply(console, args);
+                const consoleOutput = document.getElementById('console-output');
+                if (consoleOutput) {
+                    const message = args.join(' ');
+                    consoleOutput.innerHTML += '<div>' + message + '</div>';
+                    consoleOutput.scrollTop = consoleOutput.scrollHeight;
+                }
+            };
+
+            // Test button click manually
+            const langToggle = document.querySelector('.lang-toggle');
+            if (langToggle) {
+                statusDiv.innerHTML = '✓ Language toggle button found!';
+                statusDiv.style.background = '#c8e6c9';
+            } else {
+                statusDiv.innerHTML = '✗ Language toggle button NOT found!';
+                statusDiv.style.background = '#ffcdd2';
+            }
+
+            // Check language manager
+            setTimeout(() => {
+                if (window.langManager) {
+                    console.log('✓ Language Manager exists');
+                    console.log('Current language:', window.langManager.currentLang);
+                    
+                    // Manual test button
+                    const testBtn = document.createElement('button');
+                    testBtn.textContent = 'Manual Toggle Test';
+                    testBtn.style.marginTop = '10px';
+                    testBtn.onclick = function() {
+                        console.log('=== Manual Toggle Test ===');
+                        window.langManager.toggleLanguage();
+                    };
+                    statusDiv.appendChild(testBtn);
+                } else {
+                    console.log('✗ Language Manager NOT found');
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>
+

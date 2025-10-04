@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "wealthytiger",
+    "prod": "wealthytigers-web"
+  },
+  "targets": {},
+  "etags": {}
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Home Page -->
+    <url>
+        <loc>https://wealthytigers.com/</loc>
+        <lastmod>2025-10-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="th" href="https://wealthytigers.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://wealthytigers.com/" />
+    </url>
+    
+    <!-- About Page -->
+    <url>
+        <loc>https://wealthytigers.com/about.html</loc>
+        <lastmod>2025-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="th" href="https://wealthytigers.com/about.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://wealthytigers.com/about.html" />
+    </url>
+    
+    <!-- Collections Page -->
+    <url>
+        <loc>https://wealthytigers.com/collections.html</loc>
+        <lastmod>2025-10-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="th" href="https://wealthytigers.com/collections.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://wealthytigers.com/collections.html" />
+    </url>
+    
+    <!-- Partnership Page -->
+    <url>
+        <loc>https://wealthytigers.com/partnership.html</loc>
+        <lastmod>2025-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="th" href="https://wealthytigers.com/partnership.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://wealthytigers.com/partnership.html" />
+    </url>
+    
+    <!-- Contact Page -->
+    <url>
+        <loc>https://wealthytigers.com/contact.html</loc>
+        <lastmod>2025-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="th" href="https://wealthytigers.com/contact.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://wealthytigers.com/contact.html" />
+    </url>
+    
+</urlset>
+
