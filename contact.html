@@ -15,68 +15,174 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fashion-design.css">
     
     <!-- SEO Script - Load early for better SEO -->
     <script src="assets/js/seo.js"></script>
 </head>
 <body>
+    <!-- Top Info Bar -->
+    <div class="top-info-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="mailto:info@momento.com" class="top-info-link">
+                    <i class="fas fa-envelope"></i> info@momento.com
+                </a>
+                <a href="tel:+12808301190" class="top-info-link">
+                    <i class="fas fa-phone"></i> (+12) 808 300 1190
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-links-top">
+                    <a href="#" class="social-link-top"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link-top"><i class="fab fa-x"></i></a>
+                    <a href="#" class="social-link-top"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link-top"><i class="fab fa-line"></i></a>
+                </div>
+                <span class="top-bar-text">Follow us</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Header will be loaded here -->
     <div id="header-placeholder"></div>
 
     <!-- Contact Hero -->
     <section class="contact-hero">
+        <div class="hero-pattern"></div>
         <div class="container">
             <div class="contact-hero-content">
                 <div class="breadcrumb">
-                    <a href="index.html" data-i18n="nav.home">หน้าแรก</a> / <span data-i18n="nav.contact">ติดต่อเรา</span>
+                    <a href="index.html" data-i18n="nav.home">หน้าแรก</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span data-i18n="nav.contact">ติดต่อเรา</span>
                 </div>
-                <h1 class="contact-hero-title" data-i18n="contact.title">ติดต่อเรา</h1>
-                <p class="contact-hero-subtitle" data-i18n="contact.subtitle">ติดต่อเราเพื่อโอกาสความร่วมมือและการขยายธุรกิจ</p>
+                <h1 class="contact-hero-title" data-i18n="contact.title">
+                    มาคุยกันเถอะ
+                </h1>
+                <p class="contact-hero-subtitle" data-i18n="contact.subtitle">
+                    เราพร้อมรับฟังและร่วมสร้างความสำเร็จไปด้วยกัน
+                </p>
+                <div class="hero-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-dot"></div>
+                    <div class="decoration-line"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Information -->
-    <section class="contact-info-section">
+    <!-- Quick Contact Cards -->
+    <section class="quick-contact-section">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info-cards">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-content">
-                            <h3 data-i18n="contact.emailTitle">อีเมล</h3>
-                            <p>ploysai.k@wealthytigers.com</p>
-                        </div>
+            <div class="quick-contact-grid">
+                <div class="quick-contact-card">
+                    <div class="quick-icon">
+                        <i class="fas fa-envelope"></i>
                     </div>
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="info-content">
-                            <h3 data-i18n="contact.hoursTitle">เวลาทำการ</h3>
-                            <p data-i18n="contact.hours">จันทร์ - ศุกร์: 9:00 - 18:00</p>
+                    <h3 data-i18n="contact.emailTitle">อีเมล</h3>
+                    <p>ploysai.k@wealthytigers.com</p>
+                    <a href="mailto:ploysai.k@wealthytigers.com" class="quick-link">
+                        ส่งอีเมล <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="quick-contact-card">
+                    <div class="quick-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 data-i18n="contact.hoursTitle">เวลาทำการ</h3>
+                    <p data-i18n="contact.hours">จันทร์ - ศุกร์: 9:00 - 18:00</p>
+                    <span class="quick-badge">พร้อมให้บริการ</span>
+                </div>
+                <div class="quick-contact-card">
+                    <div class="quick-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>ความร่วมมือ</h3>
+                    <p>สนใจความร่วมมือทางธุรกิจ</p>
+                    <a href="partnership.html" class="quick-link">
+                        ดูรายละเอียด <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-main">
+        <div class="container">
+            <div class="contact-two-column">
+                <div class="contact-form-side">
+                    <div class="section-badge">ติดต่อเรา</div>
+                    <h2 class="section-title" data-i18n="contact.formTitle">ส่งข้อความหาเรา</h2>
+                    <p class="section-description" data-i18n="contact.formDesc">
+                        กรอกข้อมูลด้านล่างเพื่อติดต่อเรา หรือคลิกปุ่มเพื่อส่งอีเมลโดยตรง
+                    </p>
+                    
+                    <div class="contact-form-visual">
+                        <div class="form-preview">
+                            <div class="form-icon-large">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <h3>พร้อมเริ่มต้นแล้วหรือยัง?</h3>
+                            <p>คลิกปุ่มด้านล่างเพื่อส่งอีเมลถึงเราได้เลย</p>
+                            <a href="mailto:ploysai.k@wealthytigers.com?subject=ติดต่อจากเว็บไซต์ Wealthy Tigers&body=สวัสดีครับ,%0D%0A%0D%0Aผม/ดิฉัน มีความสนใจเกี่ยวกับ:%0D%0A%0D%0A" class="btn btn-primary btn-large">
+                                <i class="fas fa-envelope"></i>
+                                <span data-i18n="contact.sendEmail">ส่งอีเมลถึงเรา</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Contact Action -->
-                <div class="contact-form-section">
-                    <div class="form-container">
-                        <h2 data-i18n="contact.formTitle">ส่งข้อความหาเรา</h2>
-                        <p data-i18n="contact.formDesc">คลิกปุ่มด้านล่างเพื่อส่งอีเมลถึงเรา</p>
-                        
-                        <div class="contact-action">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
+
+                <div class="contact-info-side">
+                    <div class="contact-info-card">
+                        <h3>ข้อมูลเพิ่มเติม</h3>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-item-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="info-item-content">
+                                    <h4>ที่ตั้งบริษัท</h4>
+                                    <p>United Center Building, Bangkok</p>
+                                </div>
                             </div>
-                            <h3>ติดต่อผ่านอีเมล</h3>
-                            <p>เราพร้อมรับฟังและตอบคำถามของคุณ</p>
-                            <a href="mailto:ploysai.k@wealthytigers.com?subject=ติดต่อจากเว็บไซต์ Wealthy Tigers" class="btn btn-primary btn-large">
-                                <i class="fas fa-paper-plane"></i>
-                                <span data-i18n="contact.sendEmail">ส่งอีเมลถึงเรา</span>
-                            </a>
+                            <div class="info-item">
+                                <div class="info-item-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="info-item-content">
+                                    <h4>ภาษา</h4>
+                                    <p>ไทย, English</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-item-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="info-item-content">
+                                    <h4>เวลาตอบกลับ</h4>
+                                    <p>ภายใน 24 ชั่วโมง</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-connect">
+                            <h4>ติดตามเราได้ที่</h4>
+                            <div class="social-links-modern">
+                                <a href="#" class="social-modern-link">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-modern-link">
+                                    <i class="fab fa-x"></i>
+                                </a>
+                                <a href="#" class="social-modern-link">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-modern-link">
+                                    <i class="fab fa-line"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -106,39 +212,53 @@
     </section>
 
     <!-- Why Contact Us -->
-    <section class="why-choose-us">
+    <section class="why-contact-section">
         <div class="container">
             <div class="section-header">
+                <div class="section-badge">เหตุผลในการติดต่อ</div>
                 <h2 class="section-title">ติดต่อเราเพื่อ</h2>
+                <p class="section-subtitle">เราพร้อมรับฟังและช่วยเหลือคุณในทุกด้าน</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">
+            <div class="why-contact-grid">
+                <div class="why-contact-card">
+                    <div class="why-contact-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h3>โอกาสความร่วมมือ</h3>
-                    <p>สนใจนำแบรนด์เข้าสู่ตลาดไทยกับเรา</p>
+                    <p>สนใจนำแบรนด์เข้าสู่ตลาดไทยกับเรา พร้อมขยายธุรกิจไปด้วยกัน</p>
+                    <a href="partnership.html" class="why-contact-link">
+                        เรียนรู้เพิ่มเติม <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
+                <div class="why-contact-card">
+                    <div class="why-contact-icon">
                         <i class="fas fa-question-circle"></i>
                     </div>
                     <h3>สอบถามข้อมูล</h3>
-                    <p>มีคำถามเกี่ยวกับสินค้าหรือบริการ</p>
+                    <p>มีคำถามเกี่ยวกับสินค้าหรือบริการ เรายินดีให้ข้อมูลอย่างละเอียด</p>
+                    <a href="mailto:ploysai.k@wealthytigers.com?subject=สอบถามข้อมูล" class="why-contact-link">
+                        ส่งคำถาม <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
+                <div class="why-contact-card">
+                    <div class="why-contact-icon">
                         <i class="fas fa-comments"></i>
                     </div>
                     <h3>ข้อเสนอแนะ</h3>
-                    <p>แบ่งปันความคิดเห็นและข้อเสนอแนะ</p>
+                    <p>แบ่งปันความคิดเห็นและข้อเสนอแนะ เพื่อพัฒนาบริการให้ดียิ่งขึ้น</p>
+                    <a href="mailto:ploysai.k@wealthytigers.com?subject=ข้อเสนอแนะ" class="why-contact-link">
+                        แบ่งปันความคิดเห็น <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
+                <div class="why-contact-card">
+                    <div class="why-contact-icon">
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <h3>โอกาสทางธุรกิจ</h3>
-                    <p>สำรวจโอกาสร่วมธุรกิจกับเรา</p>
+                    <p>สำรวจโอกาสร่วมธุรกิจกับเรา และสร้างมูลค่าใหม่ไปด้วยกัน</p>
+                    <a href="mailto:ploysai.k@wealthytigers.com?subject=โอกาสทางธุรกิจ" class="why-contact-link">
+                        พูดคุยกับเรา <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -146,18 +266,19 @@
 
     <!-- CTA Section -->
     <section class="contact-cta">
+        <div class="cta-pattern"></div>
         <div class="container">
             <div class="cta-content">
                 <h2>พร้อมเริ่มต้นแล้วหรือยัง?</h2>
-                <p>ติดต่อเราวันนี้เพื่อหารือโอกาสความร่วมมือ</p>
+                <p>ติดต่อเราวันนี้เพื่อหารือโอกาสความร่วมมือและเติบโตไปด้วยกัน</p>
                 <div class="cta-buttons">
-                    <a href="mailto:ploysai.k@wealthytigers.com?subject=ติดต่อจากเว็บไซต์ Wealthy Tigers" class="btn btn-primary">
+                    <a href="mailto:ploysai.k@wealthytigers.com?subject=ติดต่อจากเว็บไซต์ Wealthy Tigers" class="btn btn-primary btn-large">
                         <i class="fas fa-envelope"></i>
-                        ส่งอีเมล
+                        ส่งอีเมลถึงเรา
                     </a>
-                    <a href="partnership.html" class="btn btn-outline">
+                    <a href="partnership.html" class="btn btn-outline-white">
                         <i class="fas fa-handshake"></i>
-                        ความร่วมมือ
+                        เรียนรู้เพิ่มเติม
                     </a>
                 </div>
             </div>

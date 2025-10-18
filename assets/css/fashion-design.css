@@ -1,0 +1,394 @@
+/* ================================
+   Modern Fashion Design Enhancements
+   For Wealthy Tigers Homepage
+================================ */
+
+/* Top Info Bar */
+.top-info-bar {
+    background: #ffffff;
+    color: #323232;
+    padding: 8px 0;
+    font-size: 0.85rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.top-info-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-left {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.top-info-link {
+    color: rgba(51, 51, 51, 0.9);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.top-info-link:hover {
+    color: #ffffff;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-links-top {
+    display: flex;
+    gap: 12px;
+}
+
+.social-link-top {
+    color: #444444;
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-link-top:hover {
+    background: #ffffff;
+    color: #0f2738;
+}
+
+.top-bar-text {
+    color: rgba(47, 47, 47, 0.8);
+    font-size: 0.8rem;
+}
+
+/* Adjust Navigation for Top Bar */
+.navbar {
+    top: 36px !important;
+}
+
+.navbar.scrolled {
+    top: 0 !important;
+}
+
+/* Logo Design */
+.nav-brand {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.brand-name {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #0f2738 !important;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+.brand-tagline {
+    font-size: 8px !important;
+    font-weight: 400 !important;
+    color: #666666 !important;
+    letter-spacing: 1px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+/* Enhanced Hero Fashion Section */
+.hero-fashion {
+    min-height: 85vh;
+    padding-top: 160px !important;
+    position: relative;
+    background: #ffffff !important;
+}
+
+/* Adjust Other Hero Sections for Top Bar */
+.about-hero,
+.contact-hero,
+.partnership-hero,
+.service-hero {
+    padding-top: 180px !important;
+}
+
+.hero-fashion::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #f5f5f5;
+    z-index: 0;
+}
+
+.hero-fashion .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-badge {
+    margin-bottom: 20px;
+}
+
+.badge-tag {
+    display: inline-block;
+    background: #b8856a;
+    color: #ffffff;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hero-fashion-title {
+    font-size: 4.5rem !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    margin-bottom: 30px !important;
+    letter-spacing: -2px !important;
+}
+
+.hero-stats-inline {
+    margin: 30px 0;
+}
+
+.stat-badge {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-number-inline {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a3a52;
+    line-height: 1;
+}
+
+.stat-label-inline {
+    font-size: 0.75rem;
+    color: #666666;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.btn-hero-discover {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 35px;
+    background: #0f2738;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    border-radius: 4px;
+}
+
+.btn-hero-discover:hover {
+    background: #1a3a52;
+    transform: translateX(5px);
+}
+
+.btn-hero-discover i {
+    font-size: 0.9rem;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    max-height: 600px !important;
+}
+
+.hero-image-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.testimonial-badge {
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.testimonial-text {
+    font-size: 0.9rem;
+    color: #333333;
+    margin: 0 0 8px 0;
+    font-weight: 500;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+}
+
+.rating-stars i {
+    color: #ffc107;
+    font-size: 0.85rem;
+}
+
+/* Brand Partners Bar */
+.brand-partners-bar {
+    background: #ffffff;
+    padding: 30px 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.partners-scroll {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.partner-logo-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666666;
+    font-weight: 500;
+    font-size: 1rem;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.partner-logo-item:hover {
+    opacity: 1;
+    color: #1a3a52;
+}
+
+.partner-logo-item i {
+    font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .top-info-bar {
+        display: none;
+    }
+    
+    .navbar {
+        top: 0 !important;
+    }
+    
+    .logo-icon {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    .brand-name {
+        font-size: 15px !important;
+    }
+    
+    .brand-tagline {
+        font-size: 7px !important;
+    }
+    
+    .hero-fashion {
+        padding-top: 120px !important;
+        min-height: auto;
+    }
+    
+    .hero-fashion::before {
+        display: none;
+    }
+    
+    .about-hero,
+    .contact-hero,
+    .partnership-hero,
+    .service-hero {
+        padding-top: 150px !important;
+    }
+    
+    .hero-fashion-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .stat-number-inline {
+        font-size: 2rem;
+    }
+    
+    .hero-image-badge {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 20px;
+    }
+    
+    .partners-scroll {
+        gap: 30px;
+        justify-content: center;
+    }
+    
+    .partner-logo-item {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-icon {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    
+    .brand-name {
+        font-size: 13px !important;
+    }
+    
+    .brand-tagline {
+        font-size: 6px !important;
+    }
+    
+    .hero-fashion-title {
+        font-size: 2rem !important;
+    }
+    
+    .btn-hero-discover {
+        padding: 14px 28px;
+        font-size: 0.8rem;
+    }
+    
+    .stat-number-inline {
+        font-size: 1.8rem;
+    }
+}
+
