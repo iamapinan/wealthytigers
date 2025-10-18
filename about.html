@@ -16,11 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     
-    <!-- SEO Script - Load early for better SEO -->
     <script src="assets/js/seo.js"></script>
 </head>
 <body>
-    <!-- Header will be loaded here -->
     <div id="header-placeholder"></div>
 
     <!-- About Hero -->
@@ -39,53 +37,77 @@
     <!-- Company Story -->
     <section class="company-story">
         <div class="container">
-            <div class="story-grid">
-                <div class="story-content">
-                    <h2 data-i18n="about.storyTitle">เรื่องราวของเรา</h2>
-                    <p class="story-intro" data-i18n="about.storyDesc">
-                        เราเป็นแพลตฟอร์ม Multichannel ที่เชื่อมต่อแบรนด์จากต่างประเทศกับผู้บริโภคไทย ผ่านทั้งออนไลน์และออฟไลน์ พร้อมพัฒนา Own Brand ในแบบที่สะท้อนตัวตนของบริษัท
-                    </p>
-                </div>
-                <div class="story-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-building"></i>
-                        <p>Wealthy Tigers</p>
-                    </div>
-                </div>
+            <div class="story-content-full">
+                <h2 class="section-title-large" data-i18n="about.storyTitle">เรื่องราวของเรา</h2>
+                <p class="story-paragraph" data-i18n="about.storyDesc">
+                    บริษัทของเราก่อตั้งขึ้นจากความตั้งใจที่จะเป็น "สะพานเชื่อม" ระหว่างแบรนด์คุณภาพจากต่างประเทศกับผู้บริโภคชาวไทย เราเชื่อว่าทั้งอาหาร เครื่องดื่ม ไลฟ์สไตล์ และแฟชั่น คือส่วนสำคัญในการสร้างประสบการณ์ชีวิตที่ครบถ้วนและสะท้อนตัวตน
+                </p>
+                <p class="story-paragraph" data-i18n="about.storyPara1">
+                    เราจึงมุ่งมั่น ค้นหา คัดสรร และนำเข้า แบรนด์ที่มีเอกลักษณ์และน่าสนใจจากทั่วโลก เข้ามาสู่ประเทศไทยอย่างมีระบบ โดยเน้นคุณภาพ ความถูกต้องตามมาตรฐานกฎหมาย และการตลาดที่เหมาะสมกับผู้บริโภคในประเทศ เราไม่เพียงแต่นำสินค้าเข้ามาจำหน่าย แต่ยังดูแลทุกขั้นตอน ตั้งแต่การทำตลาด การกระจายสินค้า จนถึงการสร้างประสบการณ์ Omnichannel ที่ไร้รอยต่อ
+                </p>
+                <p class="story-paragraph" data-i18n="about.storyPara2">
+                    นอกจากการนำเข้า เรายังพัฒนา Own Brand ขนาดเล็กที่สะท้อนตัวตนของบริษัท เพื่อทดลองแนวคิดใหม่ ๆ และเพิ่มสีสันให้กับตลาดไทย สินค้าเหล่านี้จะถูกออกแบบมาเพื่อเสริมความแตกต่าง และสร้างความสัมพันธ์ที่แน่นแฟ้นยิ่งขึ้นระหว่างบริษัทกับผู้บริโภค
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Mission & Vision -->
-    <section class="mission-vision">
+    <section class="mission-vision-detailed">
         <div class="container">
-            <div class="mission-vision-grid">
-                <div class="vision-card">
-                    <div class="card-icon">
+            <div class="mv-grid">
+                <!-- Vision -->
+                <div class="mv-card vision-detailed">
+                    <div class="mv-icon">
                         <i class="fas fa-eye"></i>
                     </div>
                     <h3 data-i18n="about.visionTitle">วิสัยทัศน์</h3>
                     <p data-i18n="about.visionDesc">
-                        เป็นผู้นำด้าน Multichannel Store ที่นำเสนอแบรนด์คุณภาพและไลฟ์สไตล์ใหม่ให้กับผู้บริโภคไทย
+                        เรามุ่งมั่นที่จะรวบรวมอาหาร เครื่องดื่ม ไลฟ์สไตล์ และแฟชั่นที่มีคุณภาพจากทั่วโลก เข้ามาสู่ตลาดไทยอย่างเป็นระบบ พร้อมทั้งสร้างแบรนด์ของเราเองในแบบที่สะท้อนเอกลักษณ์และความยั่งยืน เพื่อมอบประสบการณ์ใหม่และสร้างมาตรฐานใหม่ให้กับผู้บริโภคไทย
                     </p>
                 </div>
-                <div class="mission-card">
-                    <div class="card-icon">
+                
+                <!-- Mission -->
+                <div class="mv-card mission-detailed">
+                    <div class="mv-icon">
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <h3 data-i18n="about.missionTitle">พันธกิจ</h3>
-                    <ul style="list-style: none; padding: 0; text-align: left;">
-                        <li style="padding: 8px 0; position: relative; padding-left: 25px;">
-                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary-color);"></i>
-                            <span data-i18n="about.mission1">คัดสรรแบรนด์ที่โดดเด่น</span>
+                    <ul class="mission-list">
+                        <li>
+                            <div class="mission-item-header">
+                                <i class="fas fa-globe"></i>
+                                <strong data-i18n="about.mission1">Curating Global Brands</strong>
+                            </div>
+                            <p data-i18n="about.mission1Desc">คัดสรรแบรนด์คุณภาพที่มีเอกลักษณ์และศักยภาพ เพื่อตอบโจทย์ความต้องการที่หลากหลายของตลาดไทย</p>
                         </li>
-                        <li style="padding: 8px 0; position: relative; padding-left: 25px;">
-                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary-color);"></i>
-                            <span data-i18n="about.mission2">เปิดตลาดไทยอย่างมืออาชีพ</span>
+                        <li>
+                            <div class="mission-item-header">
+                                <i class="fas fa-shopping-bag"></i>
+                                <strong data-i18n="about.mission2">Seamless Multichannel Experience</strong>
+                            </div>
+                            <p data-i18n="about.mission2Desc">สร้างประสบการณ์การซื้อขายที่เชื่อมโยงทั้งช่องทางออฟไลน์และออนไลน์อย่างไร้รอยต่อ</p>
                         </li>
-                        <li style="padding: 8px 0; position: relative; padding-left: 25px;">
-                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary-color);"></i>
-                            <span data-i18n="about.mission3">สร้างประสบการณ์ Omnichannel</span>
+                        <li>
+                            <div class="mission-item-header">
+                                <i class="fas fa-handshake"></i>
+                                <strong data-i18n="about.mission3">Market Entry & Growth Partner</strong>
+                            </div>
+                            <p data-i18n="about.mission3Desc">ทำงานร่วมกับเจ้าของแบรนด์เพื่อวางกลยุทธ์การเข้าตลาดไทย ตั้งแต่การนำเข้า การตลาด การกระจายสินค้า ไปจนถึงการเติบโตอย่างยั่งยืน</p>
+                        </li>
+                        <li>
+                            <div class="mission-item-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <strong data-i18n="about.mission4">Developing Our Own Brand</strong>
+                            </div>
+                            <p data-i18n="about.mission4Desc">พัฒนาแบรนด์ภายในของเราเอง เพื่อสะท้อนความคิดสร้างสรรค์และเพิ่มความแตกต่างในตลาด</p>
+                        </li>
+                        <li>
+                            <div class="mission-item-header">
+                                <i class="fas fa-leaf"></i>
+                                <strong data-i18n="about.mission5">Sustainability & Responsibility</strong>
+                            </div>
+                            <p data-i18n="about.mission5Desc">ให้ความสำคัญกับการเลือกใช้วัตถุดิบ กระบวนการ และพันธมิตรที่ใส่ใจสิ่งแวดล้อมและมีความรับผิดชอบต่อสังคม</p>
                         </li>
                     </ul>
                 </div>
@@ -94,30 +116,73 @@
     </section>
 
     <!-- Business Units -->
-    <section class="core-values">
+    <section class="business-units-section">
         <div class="container">
             <div class="section-header">
-                <h2 data-i18n="about.businessUnitsTitle">หน่วยธุรกิจ</h2>
-                <p>ธุรกิจหลักของเรา</p>
+                <h2 class="section-title" data-i18n="about.businessUnitsTitle">หน่วยธุรกิจ</h2>
+                <p class="section-subtitle">ธุรกิจหลักของเรา</p>
             </div>
-            <div class="mission-vision-grid" style="gap: 40px;">
-                <div class="service-card" style="padding: 50px; text-align: center;">
-                    <div class="service-icon" style="margin: 0 auto 30px;">
-                        <i class="fas fa-store"></i>
+            
+            <!-- Business Unit 1 -->
+            <div class="business-unit-card primary-unit">
+                <div class="business-unit-header">
+                    <div class="business-unit-label" data-i18n="about.businessUnit1Label">ธุรกิจหลัก</div>
+                    <h3 data-i18n="about.businessUnit1">International Multichannel Store</h3>
+                </div>
+                <p class="business-unit-desc" data-i18n="about.businessUnit1Desc">
+                    ธุรกิจหลักของเราคือการสร้าง แพลตฟอร์ม Multichannel ที่นำเสนอแบรนด์จากทั่วโลกสู่ผู้บริโภคไทย ผ่านทั้งช่องทาง ออฟไลน์และออนไลน์ เพื่อให้เข้าถึงผู้คนได้หลากหลายและครบวงจร
+                </p>
+                
+                <div class="business-details-grid">
+                    <div class="business-detail-item">
+                        <h4><i class="fas fa-box"></i> <span data-i18n="about.businessUnit1Categories">หมวดสินค้า</span></h4>
+                        <ul>
+                            <li data-i18n="about.businessUnit1Cat1">อาหารและเครื่องดื่ม</li>
+                            <li data-i18n="about.businessUnit1Cat2">ไลฟ์สไตล์ (ของใช้, ของตกแต่งบ้าน, กูร์เมต์)</li>
+                            <li data-i18n="about.businessUnit1Cat3">แฟชั่น (เสื้อผ้า, แอคเซสซอรี่)</li>
+                        </ul>
                     </div>
-                    <h3 style="font-size: 1.6rem; margin-bottom: 20px;" data-i18n="about.businessUnit1">International Multichannel Store</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.8;" data-i18n="about.businessUnit1Desc">
-                        นำเข้าและจัดจำหน่ายแบรนด์อาหาร ไลฟ์สไตล์ และแฟชั่น ผ่านช่องทางทั้งหน้าร้านและออนไลน์
-                    </p>
+                    
+                    <div class="business-detail-item">
+                        <h4><i class="fas fa-store"></i> <span data-i18n="about.businessUnit1Channels">ช่องทางการจัดจำหน่าย</span></h4>
+                        <ul>
+                            <li data-i18n="about.businessUnit1Ch1">หน้าร้าน: Flagship Store, Pop-up Store, Multi-brand Store, Shop-in-shop</li>
+                            <li data-i18n="about.businessUnit1Ch2">ออนไลน์: E-commerce Website, Marketplace, Social Commerce</li>
+                            <li data-i18n="about.businessUnit1Ch3">ขายส่ง: Wholesale, Distributor, Reseller</li>
+                        </ul>
+                    </div>
                 </div>
                 
-                <div class="service-card" style="padding: 50px; text-align: center;">
-                    <div class="service-icon" style="margin: 0 auto 30px;">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3 style="font-size: 1.6rem; margin-bottom: 20px;" data-i18n="about.businessUnit2">Own Brand Development</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.8;" data-i18n="about.businessUnit2Desc">
-                        พัฒนาแบรนด์ของเราเองแบบคอลเลกชันเล็ก ๆ ที่สะท้อนเอกลักษณ์และความคิดสร้างสรรค์
+                <div class="business-strength">
+                    <h4><i class="fas fa-star"></i> <span data-i18n="about.businessUnit1Strength">จุดแข็ง</span></h4>
+                    <p data-i18n="about.businessUnit1StrengthDesc">
+                        เราไม่ได้เป็นเพียงผู้นำเข้า แต่คือผู้สร้างสรรค์ประสบการณ์ใหม่ ที่ทำให้ผู้บริโภคไทยได้สัมผัสกับสินค้าและแบรนด์ที่แปลกใหม่ ไม่เหมือนใคร
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Business Unit 2 -->
+            <div class="business-unit-card secondary-unit">
+                <div class="business-unit-header">
+                    <div class="business-unit-label secondary" data-i18n="about.businessUnit2Label">ธุรกิจเสริม</div>
+                    <h3 data-i18n="about.businessUnit2">Own Brand Development</h3>
+                </div>
+                <p class="business-unit-desc" data-i18n="about.businessUnit2Desc">
+                    นอกจากการเป็นแพลตฟอร์มนำเข้า เรายังพัฒนา แบรนด์ของเราเอง ในรูปแบบคอลเลกชันขนาดเล็ก (Capsule Collection) เพื่อสะท้อนเอกลักษณ์ ความคิดสร้างสรรค์ และทดลองแนวคิดใหม่ ๆ ที่สอดคล้องกับตลาดไทย
+                </p>
+                
+                <div class="business-purpose">
+                    <h4><i class="fas fa-target"></i> <span data-i18n="about.businessUnit2Purpose">จุดประสงค์</span></h4>
+                    <ul>
+                        <li data-i18n="about.businessUnit2Pur1">สร้างตัวตนของบริษัทให้ชัดเจน</li>
+                        <li data-i18n="about.businessUnit2Pur2">ทดลองสินค้าและคอนเซ็ปต์ใหม่</li>
+                        <li data-i18n="about.businessUnit2Pur3">สร้างความแตกต่างในตลาด</li>
+                    </ul>
+                </div>
+                
+                <div class="business-value">
+                    <p data-i18n="about.businessUnit2Value">
+                        Own Brand ช่วยให้บริษัทมีความยืดหยุ่น สามารถพัฒนาและนำเสนอสิ่งใหม่ ๆ ควบคู่ไปกับการนำเข้าแบรนด์ต่างประเทศ
                     </p>
                 </div>
             </div>
@@ -178,7 +243,6 @@
         </div>
     </section>
 
-    <!-- Footer will be loaded here -->
     <div id="footer-placeholder"></div>
 
     <script src="assets/js/components.js"></script>

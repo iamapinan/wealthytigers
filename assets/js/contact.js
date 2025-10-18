@@ -1,4 +1,20 @@
 // Contact page specific JavaScript
+// EmailJS Configuration
+// IMPORTANT: Replace these with your actual EmailJS credentials
+// Sign up at https://www.emailjs.com/ to get your keys
+const EMAILJS_CONFIG = {
+    serviceID: 'YOUR_SERVICE_ID',  // Replace with your EmailJS Service ID
+    templateID: 'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
+    publicKey: 'YOUR_PUBLIC_KEY'    // Replace with your EmailJS Public Key
+};
+
+// Initialize EmailJS
+(function() {
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init(EMAILJS_CONFIG.publicKey);
+    }
+})();
+
 document.addEventListener('DOMContentLoaded', function() {
     initContactForm();
     initFAQ();
@@ -62,24 +78,86 @@ function handleFormSubmission(form) {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    // Simulate API call (replace with actual endpoint)
-    setTimeout(() => {
-        console.log('Form data:', data);
-        
-        // Success
-        showMessage('ข้อความของคุณถูกส่งเรียบร้อยแล้ว เราจะติดต่อกลับโดยเร็วที่สุด', 'success');
-        form.reset();
-        
-        // Reset button
+    // Check if EmailJS is configured
+    if (!EMAILJS_CONFIG.serviceID || EMAILJS_CONFIG.serviceID === 'YOUR_SERVICE_ID') {
+        console.warn('EmailJS not configured. Using fallback mailto method.');
+        sendViaMailto(data);
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-        
-        // Optional: Redirect or show thank you message
-        setTimeout(() => {
-            // window.location.href = 'thank-you.html';
-        }, 2000);
-        
-    }, 2000);
+        return;
+    }
+
+    // Send email via EmailJS
+    if (typeof emailjs !== 'undefined') {
+        // Prepare email parameters
+        const emailParams = {
+            to_email: 'admin@wealthytigers.com',
+            from_name: data.name,
+            from_email: data.email,
+            phone: data.phone || 'ไม่ระบุ',
+            company: data.company || 'ไม่ระบุ',
+            subject: getSubjectText(data.subject),
+            message: data.message,
+            reply_to: data.email
+        };
+
+        emailjs.send(EMAILJS_CONFIG.serviceID, EMAILJS_CONFIG.templateID, emailParams)
+            .then(function(response) {
+                console.log('Email sent successfully:', response);
+                showMessage('ข้อความของคุณถูกส่งเรียบร้อยแล้ว เราจะติดต่อกลับโดยเร็วที่สุด', 'success');
+                form.reset();
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, function(error) {
+                console.error('Email send failed:', error);
+                showMessage('เกิดข้อผิดพลาดในการส่งข้อความ กรุณาลองใหม่อีกครั้งหรือติดต่อเราโดยตรงที่ admin@wealthytigers.com', 'error');
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Fallback to mailto
+                sendViaMailto(data);
+            });
+    } else {
+        console.warn('EmailJS library not loaded. Using fallback mailto method.');
+        sendViaMailto(data);
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    }
+}
+
+// Get subject text from value
+function getSubjectText(value) {
+    const subjects = {
+        'general': 'สอบถามทั่วไป',
+        'partnership': 'ความร่วมมือ',
+        'brand': 'สอบถามเกี่ยวกับแบรนด์',
+        'other': 'อื่นๆ'
+    };
+    return subjects[value] || value;
+}
+
+// Fallback method using mailto
+function sendViaMailto(data) {
+    const subject = `Contact Form: ${getSubjectText(data.subject)} - ${data.name}`;
+    const body = `
+ชื่อ: ${data.name}
+อีเมล: ${data.email}
+เบอร์โทรศัพท์: ${data.phone || 'ไม่ระบุ'}
+บริษัท: ${data.company || 'ไม่ระบุ'}
+หัวข้อ: ${getSubjectText(data.subject)}
+
+ข้อความ:
+${data.message}
+    `.trim();
+    
+    const mailtoLink = `mailto:admin@wealthytigers.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    
+    showMessage('กำลังเปิดโปรแกรมอีเมลของคุณ หรือคุณสามารถส่งอีเมลโดยตรงไปที่ admin@wealthytigers.com', 'info');
 }
 
 // Form validation

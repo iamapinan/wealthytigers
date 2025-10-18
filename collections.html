@@ -16,11 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     
-    <!-- SEO Script - Load early for better SEO -->
     <script src="assets/js/seo.js"></script>
 </head>
 <body>
-    <!-- Header will be loaded here -->
     <div id="header-placeholder"></div>
 
     <!-- Collections Hero -->
@@ -36,78 +34,87 @@
         </div>
     </section>
 
-    <!-- Coming Soon Section -->
-    <section class="company-story" style="padding: 150px 0;">
+    <!-- Collections Intro -->
+    <section class="collections-intro-section">
         <div class="container">
-            <div class="story-grid" style="grid-template-columns: 1fr; text-align: center; gap: 40px;">
-                <div class="story-content">
-                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 40px;">
-                        <i class="fas fa-box-open" style="font-size: 4rem; color: white;"></i>
+            <div class="intro-content-full">
+                <h2 class="section-title-large" data-i18n="collections.collectionIntro">คอลเลกชันที่เราคัดสรรมาเพื่อประสบการณ์ใหม่</h2>
+                <p class="intro-paragraph" data-i18n="collections.collectionDesc">
+                    เรากำลังเตรียมเปิดตัวสินค้ากลุ่มแรกที่สะท้อนแนวคิดของบริษัท—การผสมผสานระหว่าง อาหาร • ไลฟ์สไตล์ • แฟชั่น ในแบบที่สร้างประสบการณ์ใหม่ให้กับผู้บริโภคไทย
+                </p>
+                <p class="intro-highlight" data-i18n="collections.collectionNote">
+                    สินค้าที่นำเสนอจะไม่ได้เป็นเพียง "ของใช้" หรือ "ของกิน" แต่เป็น "ประสบการณ์การใช้ชีวิต (Lifestyle Experience)" ที่สะท้อนวัฒนธรรม ความเป็นเอกลักษณ์ของแต่ละประเทศ และเทรนด์ใหม่ระดับโลก
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="coming-soon-featured">
+        <div class="container">
+            <div class="coming-soon-wrapper">
+                <div class="coming-soon-icon-wrapper">
+                    <div class="coming-soon-icon">
+                        <i class="fas fa-box-open"></i>
                     </div>
-                    <h2 style="font-size: 3rem; margin-bottom: 25px;" data-i18n="collections.comingSoonTitle">เร็วๆ นี้</h2>
-                    <p class="story-intro" style="font-size: 1.3rem; max-width: 700px; margin: 0 auto 40px;" data-i18n="collections.comingSoonDesc">
-                        เรากำลังเตรียมคอลเลกชันใหม่ที่น่าตื่นเต้นสำหรับคุณ ติดตามข่าวสารได้เร็วๆ นี้
-                    </p>
-                    <a href="contact.html" class="btn btn-primary" data-i18n="collections.notifyMe">แจ้งเตือนเมื่อเปิดตัว</a>
                 </div>
+                <h2 class="coming-soon-title" data-i18n="collections.comingSoonTitle">เร็วๆ นี้</h2>
+                <p class="coming-soon-desc" data-i18n="collections.comingSoonDesc">
+                    เรากำลังเตรียมคอลเลกชันใหม่ที่น่าตื่นเต้นสำหรับคุณ ติดตามข่าวสารได้เร็วๆ นี้
+                </p>
+                <a href="contact.html" class="btn btn-primary btn-large" data-i18n="collections.notifyMe">แจ้งเตือนเมื่อเปิดตัว</a>
             </div>
         </div>
     </section>
 
     <!-- Categories Preview -->
-    <section class="services" style="background: var(--background-light);">
+    <section class="services categories-preview" style="background: var(--background-light);">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="collections.categoriesTitle">หมวดหมู่ที่จะมาเร็วๆ นี้</h2>
+                <h2 class="section-title" data-i18n="collections.categoriesTitle">หมวดหมู่หลักที่จะเปิดตัว</h2>
                 <p class="section-subtitle">สำรวจประเภทสินค้าที่เรากำลังเตรียม</p>
             </div>
             <div class="services-grid">
-                <div class="service-card" style="opacity: 0.9;">
+                <div class="service-card category-card">
                     <div class="service-icon">
                         <i class="fas fa-utensils"></i>
                     </div>
-                    <h3 class="service-title" data-i18n="collections.category1">อาหารและเครื่องดื่ม</h3>
+                    <h3 class="service-title" data-i18n="collections.category1">อาหารและเครื่องดื่มพรีเมียม</h3>
                     <p class="service-description" data-i18n="collections.category1Desc">
-                        แบรนด์อาหารและเครื่องดื่มคุณภาพจากทั่วโลก
+                        ผลิตภัณฑ์ที่มีเอกลักษณ์เฉพาะจากต่างประเทศ เช่น artisan snacks, specialty beverages, gourmet ready-to-eat
                     </p>
-                    <div style="background: var(--background-light); padding: 15px; border-radius: 8px; margin-top: 20px;">
-                        <p style="color: var(--primary-color); font-weight: 600; margin: 0;">
-                            <i class="fas fa-clock"></i> เร็วๆ นี้
-                        </p>
+                    <div class="category-badge">
+                        <i class="fas fa-clock"></i> เร็วๆ นี้
                     </div>
                 </div>
 
-                <div class="service-card" style="opacity: 0.9;">
+                <div class="service-card category-card">
                     <div class="service-icon">
                         <i class="fas fa-couch"></i>
                     </div>
-                    <h3 class="service-title" data-i18n="collections.category2">ไลฟ์สไตล์</h3>
+                    <h3 class="service-title" data-i18n="collections.category2">สินค้าไลฟ์สไตล์</h3>
                     <p class="service-description" data-i18n="collections.category2Desc">
-                        สินค้าไลฟ์สไตล์ที่ยกระดับชีวิตประจำวัน
+                        ของตกแต่งบ้าน ของใช้ที่ดีไซน์เรียบง่ายแต่พรีเมียม มีสไตล์
                     </p>
-                    <div style="background: var(--background-light); padding: 15px; border-radius: 8px; margin-top: 20px;">
-                        <p style="color: var(--primary-color); font-weight: 600; margin: 0;">
-                            <i class="fas fa-clock"></i> เร็วๆ นี้
-                        </p>
+                    <div class="category-badge">
+                        <i class="fas fa-clock"></i> เร็วๆ นี้
                     </div>
                 </div>
 
-                <div class="service-card" style="opacity: 0.9;">
+                <div class="service-card category-card">
                     <div class="service-icon">
                         <i class="fas fa-tshirt"></i>
                     </div>
-                    <h3 class="service-title" data-i18n="collections.category3">แฟชั่น</h3>
+                    <h3 class="service-title" data-i18n="collections.category3">แฟชั่นมัลติแบรนด์</h3>
                     <p class="service-description" data-i18n="collections.category3Desc">
-                        แฟชั่นและเครื่องแต่งกายที่ทันสมัย
+                        เสื้อผ้าและแอคเซสซอรี่จากแบรนด์ที่เราคัดสรรเอง เน้นคุณภาพและเอกลักษณ์ของดีไซน์
                     </p>
-                    <div style="background: var(--background-light); padding: 15px; border-radius: 8px; margin-top: 20px;">
-                        <p style="color: var(--primary-color); font-weight: 600; margin: 0;">
-                            <i class="fas fa-clock"></i> เร็วๆ นี้
-                        </p>
+                    <div class="category-badge">
+                        <i class="fas fa-clock"></i> เร็วๆ นี้
                     </div>
                 </div>
 
-                <div class="service-card" style="opacity: 0.9; border: 2px solid var(--accent-color);">
+                <div class="service-card category-card featured-category">
                     <div class="service-icon">
                         <i class="fas fa-sparkles"></i>
                     </div>
@@ -115,10 +122,8 @@
                     <p class="service-description" data-i18n="collections.category4Desc">
                         คอลเลกชันพิเศษจากแบรนด์ของเราเอง
                     </p>
-                    <div style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); padding: 15px; border-radius: 8px; margin-top: 20px;">
-                        <p style="color: white; font-weight: 600; margin: 0;">
-                            <i class="fas fa-star"></i> พิเศษ
-                        </p>
+                    <div class="category-badge special">
+                        <i class="fas fa-star"></i> พิเศษ
                     </div>
                 </div>
             </div>
@@ -126,7 +131,7 @@
     </section>
 
     <!-- Why Wait Section -->
-    <section class="why-choose-us">
+    <section class="why-choose-us why-wait-section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">ทำไมต้องรอคอย?</h2>
@@ -183,7 +188,6 @@
         </div>
     </section>
 
-    <!-- Footer will be loaded here -->
     <div id="footer-placeholder"></div>
 
     <script src="assets/js/components.js"></script>
@@ -191,4 +195,3 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-

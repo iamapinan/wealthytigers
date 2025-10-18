@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Contact Form - Wealthy Tigers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .status-box {
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 5px solid;
+        }
+        
+        .status-box.success {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        
+        .status-box.info {
+            background: #d1ecf1;
+            border-color: #17a2b8;
+            color: #0c5460;
+        }
+        
+        .status-box.warning {
+            background: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+        
+        .checklist {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .checklist li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .checklist li:before {
+            content: "✅";
+            margin-right: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px 10px 10px 0;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        
+        .code-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        
+        .code-box code {
+            color: #e83e8c;
+        }
+        
+        .section {
+            margin: 40px 0;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .feature-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .alert {
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .alert-info {
+            background: #cfe2ff;
+            border: 1px solid #b6d4fe;
+            color: #084298;
+        }
+        
+        .alert-warning {
+            background: #fff3cd;
+            border: 1px solid #ffecb5;
+            color: #664d03;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Contact Form พร้อมใช้งาน!</h1>
+        <p class="subtitle">หน้า Contact Us ได้รับการอัปเดตเรียบร้อยแล้ว</p>
+        
+        <div class="status-box success">
+            <h3 style="margin-bottom: 10px;">✅ อัปเดตสำเร็จ!</h3>
+            <p>ฟอร์มติดต่อและ Google Maps ถูกเพิ่มเข้ามาแล้ว พร้อมส่งอีเมลไปยัง admin@wealthytigers.com</p>
+        </div>
+        
+        <div class="section">
+            <h2>📋 สิ่งที่เพิ่มเข้ามา</h2>
+            <ul class="checklist">
+                <li>ระบบส่งอีเมลผ่าน EmailJS ไปยัง admin@wealthytigers.com</li>
+                <li>Google Maps แสดงที่ตั้ง United Center Building, Bangkok</li>
+                <li>ระบบ validation แบบ real-time</li>
+                <li>Format เบอร์โทรอัตโนมัติ (0XX-XXX-XXXX)</li>
+                <li>ข้อความแจ้งเตือน success/error สวยงาม</li>
+                <li>Fallback method (mailto) ถ้า EmailJS ไม่พร้อม</li>
+                <li>Responsive design รองรับทุกอุปกรณ์</li>
+                <li>รองรับภาษาไทยและอังกฤษ</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 เริ่มใช้งาน</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">📧</div>
+                    <h3>Option 1: EmailJS</h3>
+                    <p>ตั้งค่า 5 นาที ส่งอีเมลอัตโนมัติ</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Option 2: Fallback</h3>
+                    <p>ไม่ต้องตั้งค่า ใช้ได้เลย!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="alert alert-warning">
+            <strong>⚠️ สำคัญ:</strong> ถ้าต้องการให้อีเมลส่งอัตโนมัติ ต้องตั้งค่า EmailJS ก่อน
+        </div>
+        
+        <div class="section">
+            <h2>🔧 วิธีเปิดใช้ EmailJS</h2>
+            <ol style="padding-left: 20px; line-height: 2;">
+                <li>สมัครบัญชีที่ <a href="https://www.emailjs.com/" target="_blank" style="color: #667eea;">emailjs.com</a> (ฟรี)</li>
+                <li>สร้าง Email Service และ Template (ดูใน <code>EMAILJS_SETUP.md</code>)</li>
+                <li>แก้ไขไฟล์ <code>assets/js/contact.js</code> บรรทัด 5-9:</li>
+            </ol>
+            
+            <div class="code-box">
+                <code>
+const EMAILJS_CONFIG = {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;serviceID: 'service_abc123',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;templateID: 'template_xyz789',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;publicKey: 'user_1234567890'<br>
+};</code>
+            </div>
+        </div>
+        
+        <div class="status-box info">
+            <h3 style="margin-bottom: 10px;">💡 ไม่อยากตั้งค่า?</h3>
+            <p>ไม่เป็นไร! ระบบจะใช้ fallback mode อัตโนมัติ - เมื่อผู้ใช้กดส่งฟอร์ม จะเปิดโปรแกรมอีเมลในเครื่องของพวกเขาแทน</p>
+        </div>
+        
+        <div class="section">
+            <h2>🗺️ Google Maps</h2>
+            <p>แผนที่แสดงที่ตั้ง: <strong>United Center Building, Bangkok</strong></p>
+            <p style="margin-top: 10px; color: #666;">ต้องการเปลี่ยนที่อยู่? แก้ไขได้ที่ <code>contact.html</code> บรรทัด 150</p>
+        </div>
+        
+        <div class="section">
+            <h2>📁 ไฟล์ที่แก้ไข</h2>
+            <ul style="padding-left: 20px; line-height: 2; color: #666;">
+                <li><code>contact.html</code> - เพิ่ม EmailJS SDK และ Maps section</li>
+                <li><code>assets/js/contact.js</code> - ระบบส่งอีเมล</li>
+                <li><code>assets/css/style.css</code> - สไตล์แผนที่และ messages</li>
+                <li><code>assets/js/language.js</code> - คำแปลใหม่</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>📚 เอกสารที่สร้างขึ้น</h2>
+            <ul style="padding-left: 20px; line-height: 2;">
+                <li><strong>QUICK_START_CONTACT.md</strong> - คู่มือเริ่มต้นด่วน</li>
+                <li><strong>EMAILJS_SETUP.md</strong> - คู่มือตั้งค่า EmailJS แบบละเอียด</li>
+                <li><strong>CONTACT_FORM_UPDATE.md</strong> - สรุปการอัปเดตทั้งหมด</li>
+                <li><strong>TEST_CONTACT_LOCALLY.html</strong> - ไฟล์นี้ (หน้าทดสอบ)</li>
+            </ul>
+        </div>
+        
+        <div class="alert alert-info">
+            <strong>💡 เคล็ดลับ:</strong> เปิด Browser Console (กด F12) เพื่อดู debug messages ขณะทดสอบฟอร์ม
+        </div>
+        
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="contact.html" class="btn btn-primary">🚀 เปิดหน้า Contact Us</a>
+            <a href="QUICK_START_CONTACT.md" class="btn btn-secondary">📖 อ่านคู่มือ</a>
+        </div>
+        
+        <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid #eee; text-align: center; color: #999;">
+            <p>สร้างโดย Cursor AI Assistant • October 6, 2025</p>
+            <p style="margin-top: 10px;">🐯 Wealthy Tigers - Bringing Global Brands to Thailand</p>
+        </div>
+    </div>
+    
+    <script>
+        // Add some interactive feedback
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('✅ Contact Form Update Complete!');
+            console.log('📧 Email will be sent to: admin@wealthytigers.com');
+            console.log('🗺️ Map location: United Center Building, Bangkok');
+            console.log('📚 Read documentation files for setup instructions');
+        });
+    </script>
+</body>
+</html>
+
+
