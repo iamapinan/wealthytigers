@@ -21,7 +21,7 @@
 }
 
 body {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Prompt', sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
     overflow-x: hidden;
@@ -3737,6 +3737,7 @@ body {
 .solutions-section {
     padding: 80px 0;
     background: var(--white);
+    border-top: 1px solid #e0e0e0;
 }
 
 .solutions-grid {

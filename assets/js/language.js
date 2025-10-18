@@ -14,7 +14,7 @@ const translations = {
         home: {
             title: 'Wealthy Tiger',
             subtitle: 'คัดสรรและนำเข้าแบรนด์อาหาร เครื่องดื่ม ไลฟ์สไตล์ และแฟชั่นจากทั่วโลก เพื่อสร้างประสบการณ์ใหม่ที่ไม่เหมือนใครสำหรับผู้บริโภคไทย',
-            ctaExploreBrands: 'สำรวจแบรนด์',
+            ctaExploreBrands: 'สำรวจคอลเลกชัน',
             ctaPartner: 'ร่วมงานกับเรา',
             businessUnit1Title: 'International Multichannel Store',
             businessUnit1Desc: 'นำเข้าและจัดจำหน่ายแบรนด์อาหาร ไลฟ์สไตล์ และแฟชั่น ผ่านช่องทางทั้งหน้าร้านและออนไลน์',
